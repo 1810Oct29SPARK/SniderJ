@@ -1,0 +1,12 @@
+Ghost story/paranormal activity site meant to entertain whether you believe in the paranormal
+or not.
+
+uses:
+1.create an account to create a horror story or share a real one you had
+2.rate the spookiness of user's real experiences and the quality of horror stories.
+3.find a map of popular/notable paranormal spots in your area
+4. get tips for searching for and recording your own paranormal footage
+5.connect to other paranormal websites in your area
+6.read some of the most popular "hauntings" in history
+7.get definitions for what seperates different kinds of paranormal activites (such
+as the difference or lack thereof between a ghost or spirit).
