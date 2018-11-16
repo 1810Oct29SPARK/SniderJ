@@ -2,13 +2,74 @@ header{
     margin: 10px;
 background-color: rgb(71, 24, 83);
 color:rgb(148, 108, 23);
+border-radius: 10px;
+
+}
+
+a:link{
+    color:rgb(0, 150, 37);
+}
+
+a:visited{
+    color:rgb(2, 100, 26);
+}
+
+a:hover{
+    color: rgb(155, 50, 182);
+}
+
+a:active{
+    color:rgb(148, 108, 23);
+}
+
+.panelHeading{
+    box-shadow: 3px 3px 6px #bbb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), 
+    inset 0 1px rgba(255,255,255,0.3), 
+    inset 0 10px 20px rgb(71, 24, 83), 
+    inset 0 -15px 30px rgba(241, 97, 14, 0.5);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.panelFoot{
+    text-align: right;
+    box-shadow: 3px 3px 6px #bbb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), 
+    inset 0 1px rgba(255,255,255,0.3), 
+    inset 0 -10px 20px rgb(71, 24, 83), 
+    inset 0 -15px 30px rgba(241, 97, 14, 0.5);
+    border-radius: 0px 0px 10px 10px;
 }
 
 
+.panelHeading>*
+{
+margin:0px 0px 0px 0px;
+padding:6px 6px 6px 10px;
+color:rgb(219, 161, 36);
+}
+
+.panelFoot>p
+{
+font-size: 10px;
+margin:0px 0px 0px 0px;
+padding:3px 10px 3px 3px;
+color:rgb(219, 161, 36);
+}
+
+
+.boxmaker
+{
+    background-color: rgba(71, 24, 83, 0.8);
+    border-radius:10px;
+    flex:1;
+    padding: 8px;
+    margin:4px;
+}
 
 body{
 background-image: url(SpookyBackground.jpg); 
-
+font-family: Arial, Helvetica, sans-serif;
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -20,9 +81,8 @@ background-image: url(SpookyBackground.jpg);
 
 article{
 
-    flex: 3;
-    background-color: rgba(71, 24, 83, 0.8);
-color:rgb(148, 108, 23);
+flex: 3;
+color:rgb(219, 161, 36);
 padding: 3px;
 border-radius: 10px;
 margin:4px;
@@ -57,6 +117,9 @@ button
     
 }
 
+
+
+
 button:hover {
     background-color: rgb(150, 175, 38);
     box-shadow: 0 0 50px 0 rgba(255,0,0,0.60), 0 0 50px 0 rgba(0,0,0,0.19);
@@ -71,5 +134,14 @@ button:active {
       display:block;
       margin-left: auto;
       margin-right: auto;
-      width: 80%;
+      width: 70%;
   }
+
+  .centerimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
