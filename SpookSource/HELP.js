@@ -30,3 +30,26 @@ function getArtsyToken()
     fetch()
 }
 
+function ArrayRotate(Numberlist, RotateNumber)
+{
+
+    for (i=0;i<RotateNumber;i++)
+	{
+        IndexHolder= Numberlist[0];
+        for(x=0;x<Numberlist.length;x++)
+        {
+            if(x===(Numberlist.length-1))
+            {
+            Numberlist[x]=IndexHolder;
+            } 
+            else
+            {
+            Numberlist[x]=Numberlist[(x+1)];
+            }
+        }
+    }    
+
+return(Numberlist);
+
+}
+

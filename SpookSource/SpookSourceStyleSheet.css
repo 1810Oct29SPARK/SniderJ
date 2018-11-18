@@ -32,13 +32,18 @@ a:active{
 }
 
 .panelFoot{
-    text-align: right;
     box-shadow: 3px 3px 6px #bbb;
     box-shadow: 0 2px 6px rgba(0,0,0,0.5), 
     inset 0 1px rgba(255,255,255,0.3), 
     inset 0 -10px 20px rgb(71, 24, 83), 
     inset 0 -15px 30px rgba(241, 97, 14, 0.5);
     border-radius: 0px 0px 10px 10px;
+    bottom: 5px;
+    width:100%;
+    right:0px;
+    position: absolute;
+    
+    
 }
 
 
@@ -52,9 +57,11 @@ color:rgb(219, 161, 36);
 .panelFoot>p
 {
 font-size: 10px;
-margin:0px 0px 0px 0px;
+text-align: right;
+margin:0px 10px 0px 0px;
 padding:3px 10px 3px 3px;
 color:rgb(219, 161, 36);
+
 }
 
 
@@ -65,6 +72,7 @@ color:rgb(219, 161, 36);
     flex:1;
     padding: 8px;
     margin:4px;
+    position: relative;
 }
 
 body{
