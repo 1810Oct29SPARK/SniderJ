@@ -43,3 +43,109 @@ fetch('https://api.adviceslip.com/advice')
     });
     }
 }
+
+
+
+function ghostQuiz() {
+    var radios = document.getElementsByName("Ghost");
+    var answerPicked = false;
+    var userAnswer;
+    var QuestionResult= document.getElementById("questionCorrectGhost");
+
+    for(i=0 ; i < radios.length; i++ ) {
+       if(radios[i].checked) {
+         answerPicked = true;
+         userAnswer = radios[i].value;
+       }
+    } 
+    if(!answerPicked) {
+      QuestionResult.innerHTML="You didn't pick a choice!";
+      return;
+    }
+    if(userAnswer === "Interact") {
+        QuestionResult.style.color="Green";
+        QuestionResult.innerHTML="Correct!";
+    }
+    else {
+        QuestionResult.style.color="Red";
+        QuestionResult.innerHTML="Incorrect!";
+    }
+}
+
+function graveQuiz() {
+    var radios = document.getElementsByName("Lincoln");
+    var answerPicked = false;
+    var userAnswer;
+    var QuestionResult= document.getElementById("questionCorrectGrave");
+
+    for(i=0 ; i < radios.length; i++ ) {
+       if(radios[i].checked) {
+         answerPicked = true;
+         userAnswer = radios[i].value;
+       }
+    } 
+    if(!answerPicked) {
+      QuestionResult.innerHTML="You didn't pick a choice!";
+      return;
+    }
+    if(userAnswer === "WhiteHouse") {
+        QuestionResult.style.color="Green";
+        QuestionResult.innerHTML="Correct!";
+    }
+    else {
+        QuestionResult.style.color="Red";
+        QuestionResult.innerHTML="Incorrect!";
+    }
+}
+
+function demonQuiz() {
+    var radios = document.getElementsByName("demon");
+    var answerPicked = false;
+    var userAnswer;
+    var QuestionResult= document.getElementById("questionCorrectDemon");
+
+    for(i=0 ; i < radios.length; i++ ) {
+       if(radios[i].checked) {
+         answerPicked = true;
+         userAnswer = radios[i].value;
+       }
+    } 
+    if(!answerPicked) {
+      QuestionResult.innerHTML="You didn't pick a choice!";
+      return;
+    }
+    if(userAnswer === "Oni") {
+        QuestionResult.style.color="Green";
+        QuestionResult.innerHTML="Correct!";
+    }
+    else {
+        QuestionResult.style.color="Red";
+        QuestionResult.innerHTML="Incorrect!";
+    }
+}
+
+function maryQuiz() {
+    var radios = document.getElementsByName("mary");
+    var answerPicked = false;
+    var userAnswer;
+    var QuestionResult= document.getElementById("questionCorrectMary");
+
+    for(i=0 ; i < radios.length; i++ ) {
+       if(radios[i].checked) {
+         answerPicked = true;
+         userAnswer = radios[i].value;
+       }
+    } 
+    if(!answerPicked) {
+      QuestionResult.innerHTML="You didn't pick a choice!";
+      return;
+    }
+    if(userAnswer === "Execution") {
+        QuestionResult.style.color="Green";
+        QuestionResult.innerHTML="Correct!";
+    }
+    else {
+        QuestionResult.style.color="Red";
+        QuestionResult.innerHTML="Incorrect!";
+    }
+}

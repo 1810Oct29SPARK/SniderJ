@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SpookQuiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="SpookSourceStyleSheet.css" />
+    <script src="SpookScript.js"></script>
+</head>
+<body>
+<header>
+        <div class="panelHeading">
+    <h1  style="text-align: center">SpookQuiz</h1>
+</div>
+<br>
+<form style="text-align: right">
+    </div>
+        <input type="text" name="AccountName" autocomplete="off" placeholder="AccountName" required="true"/>
+        <br>
+        <input type="password" name="Password" autocomplete="off"placeholder="Password" required="true" />
+        <br>
+        <button>Spook Account Login</button>
+        </form>
+        <div style="text-align:right">
+        <button>New To Spook? Create an Account!</button>
+        </div>
+</header>
+<div id="Squeezer">
+    <section>
+            <nav>
+
+                    <a href="SpookSourceMain.html" style="text-decoration: none">
+                            <button>Back to the Main Page</button>
+                            </a>
+                        <a href="SpookSourcePrepare.html" style="text-decoration: none">
+                            <button>Preperations</button>
+                            </a>
+                            <a href="SpookSourceSpooktionary.html" style="text-decoration: none">
+                            <button>Spooktionary</button>
+                            </a>
+                            <a href="SpookSourceTours.html" style="text-decoration: none">
+                            <button>Paranormal Tours</button>
+                            </a>
+                            <a href="SpookSourceSites.html" style="text-decoration: none">
+                            <button>Other Paranormal Sites</button>
+                            </a>
+                            <a href="SpookSourceFamous.html" style="text-decoration: none">
+                            <button>Famous Spirits</button>
+                            </a>
+                            <a href="SpookFortune.html" style="text-decoration: none">
+                                    <button>Free Fortunes</button>
+                            </a>
+            </nav>
+            <article>
+                <div class="boxmaker">
+                    <div class="panelHeading">
+                        <h3 style="text-align: center;padding:6px 6px 6px 6px">How strong is your knowledge of the other side?</h3>
+                    </div>
+                    <p>take our multiple choice Spook Quiz to see if your paranormal know-how is on the up and up! 
+                    </p>
+                    </div>
+                    <section>
+                    <div class="boxmaker">
+                        <div class="panelHeading">
+                                <p>
+                                        Poltergeists
+                                </p>
+                        </div>
+                        <h3>
+                            What distinguishes a Poltergeist from other types of ghosts?
+                        </h3>
+                        <p>
+                                <input type ="radio" name="Ghost" value = "Interact">Poltergeists interact with objects in certain ways, such as causing them to float<br>
+                                <input type ="radio" name="Ghost" value = "Females">Poltergeists can only be the ghosts of females<br>
+                                <input type ="radio" name="Ghost" value = "Ritual">Poltergeists can only be contacted through a ritual, they never appear of their own volition<br>
+                                <button onclick="ghostQuiz()">Submit</button>
+                                <h2 id="questionCorrectGhost">
+
+                                </h2>
+                        </p>
+                        <div class="panelFoot">
+                        </div>
+                    </div>
+                    <div class="boxmaker">
+                            <div class="panelHeading">
+                                    <p>
+                                            Abraham Lincoln's Ghost
+                                    </p>
+                            </div>
+                            <h3>
+                                            Where does Abraham Linconln's ghost supposedly reside?
+                            </h3>
+                            <p>
+                                    <p>
+                                            <input type ="radio" name="Lincoln" value = "Monument">At the Lincoln Monument<br>
+                                            <input type ="radio" name="Lincoln" value = "WhiteHouse">At various rooms in the White House<br>
+                                            <input type ="radio" name="Lincoln" value = "Grave">Around his grave<br>
+                                            <button onclick="graveQuiz()">Submit</button>
+                                            <h2 id="questionCorrectGrave">
+            
+                                            </h2>
+                                    </p>
+                            </p>
+                            <div class="panelFoot">
+                            </div>
+                    </div>
+                    </section>
+                    <section>
+                            <div class="boxmaker">
+                                    <div class="panelHeading">
+                                            <p>
+                                                    Demons by area
+                                            </p>
+                                    </div>
+                                    <h3>
+                                                    What is the name for the Japanese variant of a demon?
+                                    </h3>
+                                    <p>
+                                            <p>
+                                                    <input type ="radio" name="demon" value = "Oni">An Oni<br>
+                                                    <input type ="radio" name="demon" value = "Geist">A Geist<br>
+                                                    <input type ="radio" name="demon" value = "Ronin">A Ronin<br>
+                                                    <button onclick="demonQuiz()">Submit</button>
+                                                    <h2 id="questionCorrectDemon">
+                    
+                                                    </h2>
+                                            </p>
+                                    </p>
+                                    <div class="panelFoot">
+                                    </div>
+                            </div>
+                            <div class="boxmaker">
+                                    <div class="panelHeading">
+                                            <p>
+                                                    Demons by area
+                                            </p>
+                                    </div>
+                                    <h3>
+                                                    Where did Bloody Mary get her nickname?
+                                    </h3>
+                                    <p>
+                                            <p>
+                                                    <input type ="radio" name="mary" value = "Drink">Her invention of the drink of the same name, used to cure hangovers from her rampant alcoholism<br>
+                                                    <input type ="radio" name="mary" value = "Execution">The executions she ordered against religious dissenters<br>
+                                                    <input type ="radio" name="mary" value = "Dress">Her preference for dark red dresses during galas and parties.<br>
+                                                    <button onclick="maryQuiz()">Submit</button>
+                                                    <h2 id="questionCorrectMary">
+                    
+                                                    </h2>
+                                            </p>
+                                    </p>
+                                    <div class="panelFoot">
+                                    </div>
+                            </div>
+                            
+                            </section>
+                    
+
+            </article>
+            
+        </section>
+</div>
+</body>
+</html>
