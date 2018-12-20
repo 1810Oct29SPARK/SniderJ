@@ -1,0 +1,44 @@
+.form-signin
+{
+    margin: 10%;
+    width: 30%;
+    display: inline-block;
+}
+.text-center
+{
+    text-align: center;
+}
+
+a:link{
+    color:rgb(0, 150, 37);
+}
+
+body
+{
+    background-image: url(marioBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button:hover
+{
+    background-color: brown;
+}
+
+button:active {
+    background-color: #3e8e41;
+  }
+
+button
+{
+    background-color: rgb(148, 31, 23);
+    border-radius: 10px;
+    border:none;
+    color:rgb(199, 199, 199);
+    padding: 15px 10%;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+    
+}

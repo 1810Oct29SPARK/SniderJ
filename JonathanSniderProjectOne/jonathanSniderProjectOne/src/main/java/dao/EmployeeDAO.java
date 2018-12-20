@@ -10,4 +10,5 @@ public interface EmployeeDAO {
 	public List<Employee> getEmployees();
 	public Employee getEmployeeById(int id);
 	public void insertEmployee(String firstName,String lastName, int reportsTo, boolean isManager, String jobTitle,double accountBalance,String logInUsername,String logInPassword);
+	public void removeEmployee(int id);
 }

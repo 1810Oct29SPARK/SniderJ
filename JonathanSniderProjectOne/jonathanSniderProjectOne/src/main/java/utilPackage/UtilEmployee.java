@@ -88,6 +88,26 @@ public class UtilEmployee implements EmployeeDAO {
 			double accountBalance, String logInUsername, String logInPassword) {
 		try(Connection con = UtilConnection.getConnection()){
 			System.out.println(con);
+			String sql= "INSERT INTO EMPLOYEE(FIRST_NAME,LAST_NAME,REPORTS_TO,IS_MANAGER,JOB_TITLE,ACCOUNT_BALANCE,LOGIN_USERNAME,LOGIN_PASSWORD) VALUES(?,?,?,?,?,?,?,?)";
+		    PreparedStatement pstmt =con.prepareStatement(sql);
+		    pstmt.setString(1, firstName);
+		    pstmt.setString(2, lastName);
+		    pstmt.setInt(3, reportsTo);
+		    if(isManager==true)
+		    {
+		    	pstmt.setInt(4, 1);
+		    }
+		    else
+		    {
+		    	pstmt.setInt(4, 0);
+		    }
+			pstmt.setString(5, jobTitle);
+			pstmt.setDouble(6, accountBalance);
+			pstmt.setString(7, logInUsername);
+			pstmt.setString(8, logInPassword);
+			pstmt.executeUpdate();
+			System.out.println("insertion succesful!");
+			
 			
 		} 
 		
@@ -97,6 +117,24 @@ public class UtilEmployee implements EmployeeDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+	}
+
+	@Override
+	public void removeEmployee(int id) {
+		try(Connection con = UtilConnection.getConnection()){
+			System.out.println(con);
+			String sql= "DELETE FROM EMPLOYEE WHERE EMPLOYEE_ID=?";
+			PreparedStatement pstmt=con.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			pstmt.executeUpdate();
+		} 
+		
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Removal Successful!");
 		
 	}
 
