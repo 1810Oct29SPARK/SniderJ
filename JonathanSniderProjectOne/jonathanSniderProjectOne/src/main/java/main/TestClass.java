@@ -2,13 +2,13 @@ package main;
 
 import beans.Employee;
 import utilPackage.UtilEmployee;
-import utilPackage.utilReimbursement;
+import utilPackage.UtilReimbursement;
 
 public class TestClass {
 
 	public static void main(String[] args) {
 		 UtilEmployee testEmployee =new UtilEmployee();
-		 utilReimbursement testReimburse=new utilReimbursement();
+		 UtilReimbursement testReimburse=new UtilReimbursement();
 		 //testReimburse.getReimbursementById(1);
 		 //Employee insertTestEmployee=testEmployee.getEmployeeById(3);
 		 //testReimburse.insertReimbursement(insertTestEmployee, "free money please", 6.10, false, 2);

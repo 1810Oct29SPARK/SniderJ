@@ -11,7 +11,7 @@ import beans.Employee;
 import beans.Reimbursement;
 import dao.ReimbursementDAO;
 
-public class utilReimbursement implements ReimbursementDAO {
+public class UtilReimbursement implements ReimbursementDAO {
 
 	@Override
 	public List<Reimbursement> getReimbursements() {

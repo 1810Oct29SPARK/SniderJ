@@ -53,7 +53,7 @@ public int getReportsTo() {
 public void setReportsTo(int reportsTo) {
 	this.reportsTo = reportsTo;
 }
-public boolean isManager() {
+public boolean getManager() {
 	return isManager;
 }
 public void setManager(boolean isManager) {
