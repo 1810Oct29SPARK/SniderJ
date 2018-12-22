@@ -130,6 +130,22 @@ public class UtilReimbursement implements ReimbursementDAO {
 		System.out.println("Removal Successful!");
 		
 	}
+	
+	public void updateReimbursement(Reimbursement reimbursement)
+	{
+		List<Reimbursement> reimbursementList= getReimbursements();
+		for(Reimbursement r: reimbursementList)
+		{
+			if(r.getReimbursementId()==reimbursement.getReimbursementId())
+			{
+				r.setEmployee(reimbursement.getEmployee());
+				r.setReimbursementName(reimbursement.getReimbursementName());
+				r.setReimbursementAmount(reimbursement.getReimbursementAmount());
+				r.setReimbursementApproved(reimbursement.getReimbursementApproved());
+				r.setDecidingManagerId(reimbursement.getDecidingManagerId());
+			}
+		}
+	}
 		
 	}
 

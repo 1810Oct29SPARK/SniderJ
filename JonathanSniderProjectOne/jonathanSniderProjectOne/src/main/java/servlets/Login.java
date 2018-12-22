@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import beans.Employee;
 import beans.LoginCredentials;
 import service.AuthenticateLogin;
+import utilPackage.UtilEmployee;
 
 /**
  * Servlet implementation class Login
@@ -54,8 +55,8 @@ public class Login extends HttpServlet {
 			session.setAttribute("accountBalance", e.getAccountBalance());
 			session.setAttribute("logInUsername", e.getLogInUsername());
 			session.setAttribute("logInPassword", e.getLogInPassword());
-			//user is sent to their profile with these  attributes now stored in the session
-			response.sendRedirect("profile");
+			//user is sent to the homepage with these  attributes now stored in the session
+			response.sendRedirect("homePage");
 		}
 		else {
 			//if authentication fails because none of the username/passwords combinations match,

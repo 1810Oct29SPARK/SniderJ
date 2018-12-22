@@ -30,7 +30,6 @@ public class AuthenticateLogin {
 				}
 			}
 			}
-		System.out.println("here's the guy: "+e.toString());
 		return e;
 		}
 	}

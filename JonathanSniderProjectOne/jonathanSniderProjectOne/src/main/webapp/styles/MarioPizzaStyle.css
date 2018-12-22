@@ -1,9 +1,31 @@
-.form-signin
+.form-signin, .boxMaker
 {
     margin: 10%;
     width: 30%;
     display: inline-block;
+    background-color: rgba(204, 187, 31, 0.8);
+    border-radius:10px;
+   padding:15px;
+    margin:100px;
 }
+
+img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+    min-width: 100%;
+}
+
+input
+{
+    margin-bottom: 10px;
+}
+
+
 .text-center
 {
     text-align: center;
@@ -21,7 +43,7 @@ body
 }
 button:hover
 {
-    background-color: brown;
+    background-color: rgb(121, 20, 20);
 }
 
 button:active {
@@ -30,7 +52,7 @@ button:active {
 
 button
 {
-    background-color: rgb(148, 31, 23);
+    background-color: rgb(97, 26, 21);
     border-radius: 10px;
     border:none;
     color:rgb(199, 199, 199);
@@ -41,4 +63,17 @@ button
 
     transition-duration: 0.2s;
     
+}
+
+.navButton
+{
+    background-color:rgb(97, 26, 21);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 10px 0px 0px;
 }

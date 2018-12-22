@@ -10,17 +10,20 @@
     <script src="placeholder.js"></script>
 </head>
 <body class="text-center">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <p class="navbar-brand">SuperStar Pizza Reimbursement</p>
+      </nav>
 
-      <form action="login" method="post">
-        <fieldset>
-            <legend>username:</legend>
-            <input required name="username" />
-        </fieldset>
-        <fieldset>
-            <legend>password:</legend>
-            <input required type="password" name="password" />
-        </fieldset>
-        <br> <input type="submit" value="login" />
+    <form class="form-signin" action="login" method="post">
+        <img class="rounded-circle" src="styles/Mario_Luigi_Finish.png" alt="mario/luigi welcome page" width="200" height="200" >
+
+        
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="Username" class="sr-only">Username</label>
+      <input  required type="text"  name="username" id="inputUsername" class="form-control" placeholder="Username" autofocus="" >
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input required type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" >
+      <button  type="submit" value="login">Sign in</button>
     </form>
 
 

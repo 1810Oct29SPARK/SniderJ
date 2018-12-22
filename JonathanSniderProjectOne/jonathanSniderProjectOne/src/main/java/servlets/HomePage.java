@@ -1,8 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,21 +8,20 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Logout
+ * Servlet implementation class Profile
  */
-public class Logout extends HttpServlet {
-
+public class HomePage extends HttpServlet {
+	
        
-
-	/**
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = -6555600706930395447L;
+	private static final long serialVersionUID = 1921801819225175967L;
 
 	/**
      * @see HttpServlet#HttpServlet()
      */
-    public Logout() {
+    public HomePage() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,19 +30,17 @@ public class Logout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		HttpSession session = request.getSession(false);
-		if (session != null) {
-			request.getRequestDispatcher("logout.html").forward(request, response);
-		} 
-		else 
-		{
-			System.out.println("for some reason I'm doing this");
-			response.sendRedirect("login");
-		}
+		//Check whether as session exists for the incoming request
+				HttpSession session = request.getSession(false);
+				if (session != null && session.getAttribute("logInUsername") != null) {
+					request.getRequestDispatcher("homePage.html").forward(request, response);
+				} 
+				else 
+				{
+					System.out.println("for some reason I'm doing this");
+					response.sendRedirect("login");
+				}
 	}
+
+
 }
-
-
-
-

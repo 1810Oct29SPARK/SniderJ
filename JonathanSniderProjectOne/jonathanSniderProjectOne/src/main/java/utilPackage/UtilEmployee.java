@@ -137,5 +137,25 @@ public class UtilEmployee implements EmployeeDAO {
 		System.out.println("Removal Successful!");
 		
 	}
+	
+	public void updateEmployee(Employee employee)
+	{
+		List<Employee> employeeList=getEmployees();
+		for(Employee e: employeeList)
+		{
+			if(e.getEmployeeId() == employee.getEmployeeId())
+			{
+				e.setFirstName(employee.getFirstName());
+				e.setLastName(employee.getLastName());
+				e.setReportsTo(employee.getReportsTo());
+				e.setManager(employee.getManager());
+				e.setJobTitle(employee.getJobTitle());
+				e.setAccountBalance(employee.getAccountBalance());
+				e.setLogInUsername(employee.getLogInUsername());
+				e.setLogInPassword(employee.getLogInUsername());
+		}
+		
+	}
 
+}
 }

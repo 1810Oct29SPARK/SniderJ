@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import beans.Employee;
+import utilPackage.UtilEmployee;
 
 /**
  * Servlet implementation class Session
@@ -49,9 +50,10 @@ public class Session extends HttpServlet {
 				double accountBalance=Double.parseDouble(session.getAttribute("accountBalance").toString());
 				String logInUsername=session.getAttribute("logInUsername").toString();
 				String logInPassword=session.getAttribute("logInPassword").toString();
-				Employee e=new Employee(employeeId,firstName,lastName,reportsTo,isManager,jobTitle,accountBalance,logInUsername,logInPassword);
+				Employee e=new Employee(employeeId,firstName,lastName,reportsTo,isManager,jobTitle,accountBalance,logInUsername,logInPassword);			
 				response.getWriter().write((new ObjectMapper()).writeValueAsString(e));
-			}
+
+				}
 			catch (Exception e)
 			{
 				response.getWriter().write("{\"session\":null}");

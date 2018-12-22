@@ -11,14 +11,9 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class Profile
  */
 public class Profile extends HttpServlet {
-	
+	private static final long serialVersionUID = 1L;
        
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1921801819225175967L;
-
-	/**
      * @see HttpServlet#HttpServlet()
      */
     public Profile() {
@@ -30,17 +25,24 @@ public class Profile extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Check whether as session exists for the incoming request
-				HttpSession session = request.getSession(false);
-				if (session != null && session.getAttribute("logInUsername") != null) {
-					request.getRequestDispatcher("employeeProfile.html").forward(request, response);
-				} 
-				else 
-				{
-					System.out.println("for some reason I'm doing this");
-					response.sendRedirect("login");
-				}
+		HttpSession session = request.getSession(false);
+		if (session != null) {
+			//set boss' name here
+			request.getRequestDispatcher("employeeProfile.html").forward(request, response);
+		} 
+		else 
+		{
+			System.out.println("for some reason I'm doing this");
+			response.sendRedirect("login");
+		}
 	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
 
 }

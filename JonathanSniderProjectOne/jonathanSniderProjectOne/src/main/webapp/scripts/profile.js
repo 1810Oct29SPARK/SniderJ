@@ -1,9 +1,12 @@
-/**
- * 
- */
 window.onload = function(){
 	populateUser();
 }
+
+
+
+
+
+
 
 function populateUser(){
 	//send a GET request to localhost:7001/SessionMgmtDemo/session
@@ -18,14 +21,24 @@ function populateUser(){
 		} else {
 			//define behavior for user returned
 			user = data;
-			document.getElementById("username").innerText = "Username: "+user.logInUsername;
-			document.getElementById("firstname").innerText = "First name: "+user.firstName;
-			document.getElementById("lastname").innerText = "Last name: "+user.lastName;
-			//document.getElementById("email").innerText = "Email: "+user.email;
-		}
-	});
-	
+            document.getElementById("usernameBar").innerText = "Hey, "+user.logInUsername+"!";
+            document.getElementById("fullName").innerText="Name: "+user.firstName+" "+user.lastName;
+            document.getElementById("jobTitle").innerText="Job Title: "+user.jobTitle;
+            if(user.isManager==true)
+            {
+            document.getElementById("managerStatus").innerText="Manager Access: Yes";
+            }
+            else
+            {
+            document.getElementById("managerStatus").innerText="Manager Access: No"; 
+            }
+            document.getElementById("username").innerText="Username: "+user.logInUsername;
+            document.getElementById("password").innerText="Username: "+user.logInPassword;
 
-	
-	
+            
+            
+
+            
+		}
+    });
 }
