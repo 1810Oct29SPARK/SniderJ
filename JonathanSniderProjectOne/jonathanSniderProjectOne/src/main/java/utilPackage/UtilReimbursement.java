@@ -146,6 +146,38 @@ public class UtilReimbursement implements ReimbursementDAO {
 			}
 		}
 	}
+	
+	public List<Reimbursement> getReimbursementsById(int id)
+	{
+		List<Reimbursement> reimbursementList=new ArrayList<Reimbursement>();
+		Reimbursement r=null;
+		UtilEmployee util=new UtilEmployee();
+		try(Connection con = UtilConnection.getConnection()){
+			System.out.println(con);
+			String sql= "SELECT * FROM REIMBURSEMENT WHERE EMPLOYEE_ID=?";
+			PreparedStatement pstmt=con.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next())
+			{
+				int ReimbursementId= rs.getInt("REIMBURSEMENT_ID");
+				int EmployeeId=rs.getInt("EMPLOYEE_ID");
+				Employee assignedEmployee= util.getEmployeeById(EmployeeId);
+				String reimbursementName = rs.getString("REIMBURSEMENT_NAME");
+				double reimbursementAmount=rs.getDouble("REIMBURSEMENT_AMOUNT");
+				boolean reimbursementApproved=rs.getBoolean("REIMBURSEMENT_APPROVED");
+				int decidingManagerId= rs.getInt("DECIDING_MANAGER_ID");
+				r= new Reimbursement(ReimbursementId,assignedEmployee,reimbursementName,reimbursementAmount,reimbursementApproved,decidingManagerId);
+				reimbursementList.add(r);
+			}
+		} 
+		
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return reimbursementList;
+	}
 		
 	}
 

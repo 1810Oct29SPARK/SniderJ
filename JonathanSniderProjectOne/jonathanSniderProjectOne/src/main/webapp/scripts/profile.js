@@ -1,5 +1,5 @@
 window.onload = function(){
-	populateUser();
+	populateProfile();
 }
 
 
@@ -8,7 +8,7 @@ window.onload = function(){
 
 
 
-function populateUser(){
+function populateProfile(){
 	//send a GET request to localhost:7001/SessionMgmtDemo/session
 	fetch("http://localhost:7001/jonathanSniderProjectOne/session").then(function(response) {
 		return response.json();
@@ -17,7 +17,7 @@ function populateUser(){
 		//define behavior for no user returned 
 		if (data.session === null) {
 			console.log("data.session was null");
-			window.location = "http://localhost:7001/SessionMgmtDemo/login";
+			window.location = "http://localhost:7001/jonathanSniderProjectOne/welcomePage";
 		} else {
 			//define behavior for user returned
 			user = data;

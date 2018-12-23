@@ -71,4 +71,24 @@
     <servlet-name>Profile</servlet-name>
     <url-pattern>/profile</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReimbursementServlet</display-name>
+    <servlet-name>ReimbursementServlet</servlet-name>
+    <servlet-class>servlets.ReimbursementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReimbursementServlet</servlet-name>
+    <url-pattern>/reimbursementServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReimbursementLister</display-name>
+    <servlet-name>ReimbursementLister</servlet-name>
+    <servlet-class>servlets.ReimbursementLister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReimbursementLister</servlet-name>
+    <url-pattern>/reimbursementLister</url-pattern>
+  </servlet-mapping>
 </web-app>

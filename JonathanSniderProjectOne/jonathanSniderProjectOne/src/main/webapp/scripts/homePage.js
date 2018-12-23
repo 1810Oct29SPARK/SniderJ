@@ -13,11 +13,16 @@ function populateUser(){
 		console.log(data);
 		if (data.session === null) {
 			console.log("data.session was null");
-			window.location = "http://localhost:7001/SessionMgmtDemo/login";
-		} else {
+			window.location = "http://localhost:7001/jonathanSniderProjectOne/welcomePage";
+		} else 
+		{
 			//define behavior for user returned
 			user = data;
 			document.getElementById("usernameBar").innerText = "Hey, "+user.logInUsername+"!";
+			if(user.isManager==true)
+            {
+            document.getElementById("openingText").innerText="You have Manager Access and as such can perform manager functions in the tab above or below";
+            }
 		}
 	});
 	
