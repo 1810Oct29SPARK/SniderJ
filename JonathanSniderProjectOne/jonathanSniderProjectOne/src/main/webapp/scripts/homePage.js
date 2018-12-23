@@ -18,11 +18,20 @@ function populateUser(){
 		{
 			//define behavior for user returned
 			user = data;
+			console.log(user);
 			document.getElementById("usernameBar").innerText = "Hey, "+user.logInUsername+"!";
-			if(user.isManager==true)
+			//if(user.manager==true && user.employeeId !=1)
+			if(user.manager && user.employeeId==1)
             {
-            document.getElementById("openingText").innerText="You have Manager Access and as such can perform manager functions in the tab above or below";
-            }
+			document.getElementById("openingText").innerText="You have Manager Access and as such can perform manager functions in the tabs above";
+			let element = document.getElementById("reimbursementButton");
+			element.parentNode.removeChild(element);
+			}
+			else if(!user.manager)
+			{
+				let element = document.getElementById("managerButton");
+				element.parentNode.removeChild(element);
+			}
 		}
 	});
 	

@@ -1,10 +1,7 @@
 window.onload = function(){
+
 	populateProfile();
 }
-
-
-
-
 
 
 
@@ -18,13 +15,21 @@ function populateProfile(){
 		if (data.session === null) {
 			console.log("data.session was null");
 			window.location = "http://localhost:7001/jonathanSniderProjectOne/welcomePage";
-		} else {
+        } else 
+        {
+
 			//define behavior for user returned
-			user = data;
+            user = data;
+            
+            document.getElementById("inputFirstName").setAttribute("value",user.firstName);
+            document.getElementById("inputLastName").setAttribute("value",user.lastName);
+            document.getElementById("inputUsername").setAttribute("value",user.logInUsername);
+            document.getElementById("inputPassword").setAttribute("value",user.logInPassword);
+
             document.getElementById("usernameBar").innerText = "Hey, "+user.logInUsername+"!";
             document.getElementById("fullName").innerText="Name: "+user.firstName+" "+user.lastName;
             document.getElementById("jobTitle").innerText="Job Title: "+user.jobTitle;
-            if(user.isManager==true)
+            if(user.isManager)
             {
             document.getElementById("managerStatus").innerText="Manager Access: Yes";
             }

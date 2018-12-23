@@ -6,40 +6,57 @@
                 <title>Reimbursements</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-                <link rel="stylesheet" type="text/css" media="screen" href="styles/MarioPizzaStyle.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="styles/MarioPizzaStyleNew.css" />
             </head>
 <body>
     	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <p class="navbar-brand" id="usernameBar" style="margin: 0px 10px 0px 0px" >hey, (username)!</p>
+                <p class="navbar-brand" id="usernameBar" style="margin: 0px 10px 0px 0px" >Reimbursement Submissions</p>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Logout</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item disabled">
                         <a class="nav-link" href="#">Reimbursements</a>
                     </li>
-                    <li class="nav-item disabled">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Profile</a>
                     </li>
                 </ul>
         </nav>
         <h1>
             Approved Reimbursements:
-            <div id="approvedList">
+        </h1>
+            <table id="approvedList">
                 <tr>
                     <th>Name</th>
                     <th>Amount</th>
                 </tr>
                  
-            </div>
-        </h1>
+            </table>
         <h1>
-            Denied/Waiting Reimbursements:
-            <div id="deniedList">
+            Waiting Reimbursements:
+        </h1>
+            <table id="waitingList">
                     <th>Name</th>
                     <th>Amount</th>
-            </div>
-        </h1>
+            </table>
+            <h1>
+                Denied Reimbursements:
+            </h1>
+                <table id="deniedList">
+                        <th>Name</th>
+                        <th>Amount</th>
+                </table>
+
+            
+            <h3>need to submit a reimbursement? use the form below:</h3>
+        <form class="form-signin" action="reimbursementServlet" method="post">
+        <label for="Reason" class="sr-only">Reason for Reimbursement</label>
+      <input  required type="text"  name="newReimbursementReason" id="inputReason" class="form-control" placeholder="Reason">
+      <label for="Amount" class="sr-only">Amount requested</label>
+      <input required type="number" name="newReimbursementAmount" id="inputAmount" class="form-control" placeholder="0.00">
+      <button  type="submit" value="reimbursementServlet">Submit</button>
+      </form>
 
 
 

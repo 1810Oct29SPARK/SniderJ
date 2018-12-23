@@ -1,30 +1,21 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Logout
+ * Servlet implementation class ManagerApproveDeny
  */
-public class Logout extends HttpServlet {
-
+public class ManagerApproveDeny extends HttpServlet {
+	private static final long serialVersionUID = 1L;
        
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6555600706930395447L;
-
-	/**
+    /**
      * @see HttpServlet#HttpServlet()
      */
-    public Logout() {
+    public ManagerApproveDeny() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,21 +24,15 @@ public class Logout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		HttpSession session = request.getSession(false);
-		if (session != null) {
-			session.invalidate();
-			request.getRequestDispatcher("logout.html").forward(request, response);
-			
-		} 
-		else 
-		{
-			System.out.println("for some reason I'm doing this");
-			response.sendRedirect("login");
-		}
+		
+		request.getRequestDispatcher("manager.html").forward(request, response);
 	}
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.getRequestDispatcher("manager.html").forward(request, response);
+	}
+
 }
-
-
-
-

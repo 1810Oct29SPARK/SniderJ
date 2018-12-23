@@ -91,4 +91,54 @@
     <servlet-name>ReimbursementLister</servlet-name>
     <url-pattern>/reimbursementLister</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Manager</display-name>
+    <servlet-name>Manager</servlet-name>
+    <servlet-class>servlets.Manager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Manager</servlet-name>
+    <url-pattern>/manager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ManagerFunctions</display-name>
+    <servlet-name>ManagerFunctions</servlet-name>
+    <servlet-class>servlets.ManagerFunctions</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerFunctions</servlet-name>
+    <url-pattern>/managerFunctions</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ManagerListReimbursements</display-name>
+    <servlet-name>ManagerListReimbursements</servlet-name>
+    <servlet-class>servlets.ManagerListReimbursements</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerListReimbursements</servlet-name>
+    <url-pattern>/managerListReimbursements</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeGetter</display-name>
+    <servlet-name>EmployeeGetter</servlet-name>
+    <servlet-class>servlets.EmployeeGetter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeGetter</servlet-name>
+    <url-pattern>/employeeGetter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ManagerApproveDeny</display-name>
+    <servlet-name>ManagerApproveDeny</servlet-name>
+    <servlet-class>servlets.ManagerApproveDeny</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerApproveDeny</servlet-name>
+    <url-pattern>/managerApproveDeny</url-pattern>
+  </servlet-mapping>
 </web-app>

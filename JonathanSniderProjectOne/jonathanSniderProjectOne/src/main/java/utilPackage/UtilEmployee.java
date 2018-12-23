@@ -140,22 +140,34 @@ public class UtilEmployee implements EmployeeDAO {
 	
 	public void updateEmployee(Employee employee)
 	{
-		List<Employee> employeeList=getEmployees();
-		for(Employee e: employeeList)
-		{
-			if(e.getEmployeeId() == employee.getEmployeeId())
-			{
-				e.setFirstName(employee.getFirstName());
-				e.setLastName(employee.getLastName());
-				e.setReportsTo(employee.getReportsTo());
-				e.setManager(employee.getManager());
-				e.setJobTitle(employee.getJobTitle());
-				e.setAccountBalance(employee.getAccountBalance());
-				e.setLogInUsername(employee.getLogInUsername());
-				e.setLogInPassword(employee.getLogInUsername());
-		}
+		try(Connection con = UtilConnection.getConnection()){
+			System.out.println(con);
+			String sql= "UPDATE EMPLOYEE SET FIRST_NAME=?,LAST_NAME=?,REPORTS_TO=?,IS_MANAGER=?,JOB_TITLE=?,ACCOUNT_BALANCE=?,LOGIN_USERNAME=?,LOGIN_PASSWORD=? WHERE EMPLOYEE_ID=?";
+			PreparedStatement pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, employee.getFirstName());
+			pstmt.setString(2, employee.getLastName());
+			pstmt.setInt(3, employee.getReportsTo());
+		    if(employee.getManager()==true)
+		    {
+		    	pstmt.setInt(4, 1);
+		    }
+		    else
+		    {
+		    	pstmt.setInt(4, 0);
+		    }
+			pstmt.setString(5, employee.getJobTitle());
+			pstmt.setDouble(6, employee.getAccountBalance());
+			pstmt.setString(7, employee.getLogInUsername());
+			pstmt.setString(8, employee.getLogInPassword());
+			pstmt.setInt(9, employee.getEmployeeId());
+			pstmt.executeUpdate();
+			System.out.println("employee updated!");
+		} 
 		
-	}
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 }
 }
